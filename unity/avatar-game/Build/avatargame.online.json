@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "AvatarGame",
+"productVersion": "1.0",
+"dataUrl": "avatargame.online.data.unityweb",
+"wasmCodeUrl": "avatargame.online.wasm.code.unityweb",
+"wasmFrameworkUrl": "avatargame.online.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.24f1"
+}

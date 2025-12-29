@@ -1,0 +1,16 @@
+{
+"companyName": "Marty Games",
+"productName": "Baldi's Schoolhouse Escape",
+"productVersion": "1.0",
+"dataUrl": "baldi-schoolhouse-escape.data.unityweb",
+"wasmCodeUrl": "baldi-schoolhouse-escape.wasm.code.unityweb",
+"wasmFrameworkUrl": "baldi-schoolhouse-escape.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.24f1"
+}
