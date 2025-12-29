@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>LD56</title>
+  <link rel="shortcut icon" href="res/favicon.ico">
+  <link rel="stylesheet" href="res/styles.css">
+</head>
+
+<body>
+  <canvas id="unity-canvas"></canvas>
+  <div id="unity-loading-bar">
+    <div id="unity-progress-bar">
+    </div>
+  </div>
+  <script src="Build/slimeow-1.0.2-webgl.loader.js"></script>
+  <script>
+    const maxPixelRatioMobile = 2.0;
+    const maxPixelRatioDesktop = 1.5;
+
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    var maxDevicePixelRatio = isMobile? maxPixelRatioMobile: maxPixelRatioDesktop;
+    var pixelRatio = Math.min(window.devicePixelRatio, maxDevicePixelRatio);
+
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/slimeow-1.0.2-webgl.loader.js";
+    var config = {
+      dataUrl: buildUrl + "/slimeow-1.0.2-webgl.data.gz",
+      frameworkUrl: buildUrl + "/slimeow-1.0.2-webgl.framework.js.gz",
+      codeUrl: buildUrl + "/slimeow-1.0.2-webgl.wasm.gz",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "ranqn",
+      productName: "Slimeow Game",
+      productVersion: "1.0.0",
+      devicePixelRatio: pixelRatio
+    };
+
+    var canvas = document.querySelector("#unity-canvas");
+    var loadingBar = document.querySelector("#unity-loading-bar");
+    var progressBar = document.querySelector("#unity-progress-bar");
+    var unityInstance = null;
+
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = function() {
+      createUnityInstance(canvas, config, function(progress) {
+        progressBar.style.width = 100 * progress + "%";
+      }).then(function(instance) {
+        unityInstance = instance;
+        loadingBar.style.display = "none";
+      }).catch(function(message) {
+        alert(message);
+      });
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+
+</html>
+<script defer src="https://static.itch.io/htmlgame.js" type="text/javascript"></script>
