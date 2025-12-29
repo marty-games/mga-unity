@@ -1,0 +1,16 @@
+{
+"companyName": "Andrew's Games",
+"productName": "Time and Again",
+"productVersion": "0.1",
+"dataUrl": "Time and Again WEBGL.data.unityweb",
+"wasmCodeUrl": "Time and Again WEBGL.wasm.code.unityweb",
+"wasmFrameworkUrl": "Time and Again WEBGL.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.0f1"
+}

@@ -1,0 +1,17 @@
+{
+"companyName": "Cactusmancer",
+"productName": "Void Golf",
+"productVersion": "1.0",
+"dataUrl": "Void Golf Web.data.unityweb",
+"wasmCodeUrl": "Void Golf Web.wasm.code.unityweb",
+"wasmFrameworkUrl": "Void Golf Web.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "Void Golf Web.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.0f1"
+}

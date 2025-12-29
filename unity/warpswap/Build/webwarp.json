@@ -1,0 +1,16 @@
+{
+"companyName": "Warpswap",
+"productName": "Warpswap",
+"productVersion": "0.1",
+"dataUrl": "webwarp.data.unityweb",
+"wasmCodeUrl": "webwarp.wasm.code.unityweb",
+"wasmFrameworkUrl": "webwarp.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#1C1C1C",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.11f1"
+}
