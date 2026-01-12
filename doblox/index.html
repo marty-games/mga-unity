@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <title>FameGame</title>
-    <link rel="stylesheet" href="./style.css"/>
-    <script type="text/javascript" src="./Web Audio Plugin/howler.min.js"></script>
-    <script type="text/javascript" src="./Web Audio Plugin/WebAudio.js"></script>
+    <base href="http://cdn.jsdelivr.net/gh/marty-games/mga-unity@main/doblox/">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Doblox</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="Web Audio Plugin/howler.min.js"></script>
+    <script type="text/javascript" src="Web Audio Plugin/WebAudio.js"></script>
     <!-- Yandex Games SDK -->
     <script src="/sdk.js"></script>
     <!-- GameMonetize SDK Entegrasyonu -->
     <script type="text/javascript">
         window.SDK_OPTIONS = {
             gameId: "jp112o3o4hzgrnc7zaewjkrfk282pul8",
-            onEvent: function (a) {
+            onEvent: function(a) {
                 switch (a.name) {
                     case "SDK_GAME_PAUSE":
                         console.log("Oyun duraklatıldı, ses kapatılıyor...");
@@ -34,7 +36,7 @@
                 }
             }
         };
-        (function (a, b, c) {
+        (function(a, b, c) {
             var d = a.getElementsByTagName(b)[0];
             a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src = "https://cdn.jsdelivr.net/gh/testamalame/sef@main/sedk.js", d.parentNode.insertBefore(a, d));
         })(document, "script", "gamemonetize-sdk");
@@ -43,7 +45,9 @@
         canvas:focus {
             outline: none;
         }
-        html, body {
+
+        html,
+        body {
             padding: 0;
             margin: 0;
             overflow: hidden;
@@ -53,18 +57,19 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             height: 100%;
         }
     </style>
 </head>
+
 <body class="dark">
     <div id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas" tabindex="-1"></canvas>
     </div>
     <div id="loading-cover" style="display:none;">
         <div id="unity-loading-bar">
-            <div id="unity-logo"><img src="logo.png"/></div>
+            <div id="unity-logo"><img src="logo.png" /></div>
             <div id="unity-progress-bar-empty" style="display: none;">
                 <div id="unity-progress-bar-full"></div>
             </div>
@@ -105,7 +110,9 @@
                     combinedArray.set(new Uint8Array(buffer), offset);
                     offset += buffer.byteLength;
                 }
-                const blob = new Blob([combinedArray], { type: 'application/octet-stream' });
+                const blob = new Blob([combinedArray], {
+                    type: 'application/octet-stream'
+                });
                 return URL.createObjectURL(blob);
             } catch (error) {
                 console.error("Part birleştirme hatası:", error);
@@ -200,11 +207,29 @@
         let initGame = false;
         let nowFullAdOpen = false;
 
-        function GetPayments() { console.warn("GetPayments is not implemented"); return Promise.resolve("none"); }
-        function BuyPayments() { console.warn("GetPayments is not implemented"); return Promise.resolve("none"); }
-        function SaveCloud() { console.warn("SaveCloud is not implemented"); }
-        function LoadCloud() { console.warn("LoadCloud is not implemented"); return Promise.resolve("noData"); }
-        function InitPlayer() { console.warn("InitPlayer is not implemented"); return Promise.resolve("noData"); }
+        function GetPayments() {
+            console.warn("GetPayments is not implemented");
+            return Promise.resolve("none");
+        }
+
+        function BuyPayments() {
+            console.warn("GetPayments is not implemented");
+            return Promise.resolve("none");
+        }
+
+        function SaveCloud() {
+            console.warn("SaveCloud is not implemented");
+        }
+
+        function LoadCloud() {
+            console.warn("LoadCloud is not implemented");
+            return Promise.resolve("noData");
+        }
+
+        function InitPlayer() {
+            console.warn("InitPlayer is not implemented");
+            return Promise.resolve("noData");
+        }
 
         function FullAdShow() {
             try {
@@ -227,6 +252,7 @@
         function RewardedShow(rewardId) {
             try {
                 myGameInstance.SendMessage("YandexGame", "RewardVideo", rewardId);
+
                 function closeRewardedAd() {
                     myGameInstance.SendMessage("YandexGame", "CloseRewardVideo");
                     FocusGame();
@@ -235,14 +261,37 @@
             } catch (error) {}
         }
 
-        function StickyAdActivity() { console.warn("StickyAdActivity is not implemented"); }
-        function Review() { console.warn("Review is not implemented"); }
-        function PromptShow() { console.warn("PromptShow is not implemented"); }
-        function InitLeaderboards() { console.warn("InitLeaderboards is not implemented"); }
-        function GetLeaderboardScores() { console.warn("GetLeaderboardScores is not implemented"); }
-        function SetLeaderboardScores() { console.warn("SetLeaderboardScores is not implemented"); }
-        function ConsumePurchase() { console.warn("ConsumePurchase is not implemented"); }
-        function ConsumePurchases() { console.warn("ConsumePurchases is not implemented"); }
+        function StickyAdActivity() {
+            console.warn("StickyAdActivity is not implemented");
+        }
+
+        function Review() {
+            console.warn("Review is not implemented");
+        }
+
+        function PromptShow() {
+            console.warn("PromptShow is not implemented");
+        }
+
+        function InitLeaderboards() {
+            console.warn("InitLeaderboards is not implemented");
+        }
+
+        function GetLeaderboardScores() {
+            console.warn("GetLeaderboardScores is not implemented");
+        }
+
+        function SetLeaderboardScores() {
+            console.warn("SetLeaderboardScores is not implemented");
+        }
+
+        function ConsumePurchase() {
+            console.warn("ConsumePurchase is not implemented");
+        }
+
+        function ConsumePurchases() {
+            console.warn("ConsumePurchases is not implemented");
+        }
 
         try {
             const script = document.createElement("script");
@@ -251,7 +300,7 @@
                 try {
                     config.dataUrl = await combineParts(dataParts);
                     config.codeUrl = await combineParts(wasmParts);
-                    StartUnityInstance = function () {
+                    StartUnityInstance = function() {
                         createUnityInstance(canvas, config, (progress) => {
                             spinner.style.display = "none";
                             progressBarEmpty.style.display = "";
@@ -297,4 +346,5 @@
         });
     </script>
 </body>
+
 </html>
