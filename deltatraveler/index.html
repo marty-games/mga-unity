@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
-    <base href="https://cdn.jsdelivr.net/gh/genizy/web-port@main/deltatraveler/">
+    <base href="https://cdn.jsdelivr.net/gh/marty-games/mga-unity@main/deltatraveler/">
     <meta charset="utf-8">
-    <title>Unity Web Player | DELTATRAVELER</title>
+    <title>Deltatraveler</title>
     <style>
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             border: 0;
@@ -14,16 +16,18 @@
             overflow: hidden;
             background: #1F1F20;
         }
+
         #unity-canvas {
             display: block;
             background: #1F1F20;
         }
     </style>
 </head>
+
 <body>
     <div id="loading-text" style="color: white; font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;">LOADING...</div>
     <canvas id="unity-canvas" tabindex="-1"></canvas>
-    
+
     <script src="Build/DELTAWEBGL.loader.js"></script>
     <script>
         const canvas = document.querySelector("#unity-canvas");
@@ -31,7 +35,7 @@
         function resizeCanvas() {
             canvas.style.width = window.innerWidth + "px";
             canvas.style.height = window.innerHeight + "px";
-	    canvas.width = window.innerWidth;
+            canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             canvas.style.position = "fixed";
 
@@ -53,25 +57,33 @@
         let loadedBytes = 0;
 
         function formatSize(bytes) {
-            if (bytes > 1024*1024*1024) return (bytes / (1024*1024*1024)).toFixed(2) + " GB";
-            if (bytes > 1024*1024) return (bytes / (1024*1024)).toFixed(2) + " MB";
+            if (bytes > 1024 * 1024 * 1024) return (bytes / (1024 * 1024 * 1024)).toFixed(2) + " GB";
+            if (bytes > 1024 * 1024) return (bytes / (1024 * 1024)).toFixed(2) + " MB";
             if (bytes > 1024) return (bytes / 1024).toFixed(2) + " KB";
             return bytes + " B";
         }
 
         async function getSize(url) {
             try {
-                const res = await fetch(url, { method: "HEAD" });
+                const res = await fetch(url, {
+                    method: "HEAD"
+                });
                 return parseInt(res.headers.get("Content-Length") || "0", 10);
-            } catch { return 0; }
+            } catch {
+                return 0;
+            }
         }
 
         async function fetchWithProgress(url) {
             const response = await fetch(url);
             const reader = response.body.getReader();
-            let chunks = [], received = 0;
+            let chunks = [],
+                received = 0;
             while (true) {
-                const { done, value } = await reader.read();
+                const {
+                    done,
+                    value
+                } = await reader.read();
                 if (done) break;
                 received += value.length;
                 loadedBytes += value.length;
@@ -108,9 +120,9 @@
                 mergeFiles(dataParts),
                 mergeFiles(wasmParts)
             ]);
-setInterval(() => {
-  resizeCanvas();
-}, 1000);
+            setInterval(() => {
+                resizeCanvas();
+            }, 1000);
 
             createUnityInstance(canvas, {
                 arguments: [],
@@ -121,13 +133,14 @@ setInterval(() => {
                 companyName: "RynoGG",
                 productName: "DELTATRAVELER",
                 productVersion: "3.0.12.0111",
-    // optional: set fullscreen scaling mode
-    matchWebGLToCanvasSize: true
+                // optional: set fullscreen scaling mode
+                matchWebGLToCanvasSize: true
             }).then(() => {
                 loadingText.remove();
-resizeCanvas();
+                resizeCanvas();
             });
         })();
     </script>
 </body>
+
 </html>
