@@ -184,99 +184,100 @@
         </div>
     </div>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2b96e6c69cb44200a90fd32a8c45cada","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
-<script>
-    //var buildUrl = "Build";
-    //var buildUrl = "Build";
-    var buildUrl = "Build";
-    const loaderUrl = buildUrl + "/UnityLoader.js";
-    var config = {
-        dataUrl: buildUrl + "/barry-schoolhouse-escape.data.unityweb",
-        frameworkUrl: buildUrl + "/barry-schoolhouse-escape.framework.js.unityweb",
-        codeUrl: buildUrl + "/barry-schoolhouse-escape.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "Marty Games",
-        productName: "Barry’s Schoolhouse Escape",
-        productVersion: "1.0",
-    };
+    <script>
+        //var buildUrl = "Build";
+        //var buildUrl = "Build";
+        var buildUrl = "Build";
+        const loaderUrl = buildUrl + "/UnityLoader.js";
+        var config = {
+            dataUrl: buildUrl + "/barry-schoolhouse-escape.data.unityweb",
+            frameworkUrl: buildUrl + "/barry-schoolhouse-escape.framework.js.unityweb",
+            codeUrl: buildUrl + "/barry-schoolhouse-escape.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "Marty Games",
+            productName: "Barry’s Schoolhouse Escape",
+            productVersion: "1.0",
+        };
 
-    var progressElement = document.getElementById('progress_fill');
-    var container = document.getElementById("unity-container");
-    var canvas = document.getElementById("unity-canvas");
-    var loadingBar = document.querySelector("#loadingBlock");
-    var progressBarFull = document.querySelector("#progress_fill");
-    var progress_text = document.querySelector(".gameloader-progress-info");
-    let text_percent = "";
-
+        var progressElement = document.getElementById('progress_fill');
+        var container = document.getElementById("unity-container");
+        var canvas = document.getElementById("unity-canvas");
+        var loadingBar = document.querySelector("#loadingBlock");
+        var progressBarFull = document.querySelector("#progress_fill");
+        var progress_text = document.querySelector(".gameloader-progress-info");
+        let text_percent = "";
 
 
 
-    var script = document.createElement("script");
-    script.src = loaderUrl;
-    script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-            progressElement.style.width = 100 * progress + "%";
-            text_percent = "Downloading file: " + Math.round(progress * 100) + "%";
-            progress_text.innerText = text_percent;
-            if (progress >= 99) {
-                progress_text.innerText = "Game Loading ...";
-            }
-        }).then((unityInstance) => {
-            window.unityInstance = unityInstance;
-            setTimeout(function() {
-                loadingBar.style.display = "none";
-            }, 2000);
-            container.style.display = "block";
-        }).catch((message) => {
-            alert(message);
+
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                progressElement.style.width = 100 * progress + "%";
+                text_percent = "Downloading file: " + Math.round(progress * 100) + "%";
+                progress_text.innerText = text_percent;
+                if (progress >= 99) {
+                    progress_text.innerText = "Game Loading ...";
+                }
+            }).then((unityInstance) => {
+                window.unityInstance = unityInstance;
+                setTimeout(function() {
+                    loadingBar.style.display = "none";
+                }, 2000);
+                container.style.display = "block";
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+    </script>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics-compat.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import {
+            getAnalytics
+        } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+        import {
+            getAuth
+        } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCTdIrjIZVlIOfurM15BL9kEIKp7XwTX9o",
+            authDomain: "barry-s-schoolhouse-escape.firebaseapp.com",
+            projectId: "barry-s-schoolhouse-escape",
+            storageBucket: "barry-s-schoolhouse-escape.appspot.com",
+            messagingSenderId: "682550133157",
+            appId: "1:682550133157:web:b83d19a0e710360ac7a84c",
+            measurementId: "G-MZRYWNCEPM"
+        };
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function() {
+            window.dataLayer.push(arguments);
+        }
+
+        window.gtag("config", firebaseConfig.measurementId, {
+            cookie_domain: window.location.hostname,
+            cookie_flags: "SameSite=None;Secure",
         });
-    };
-    document.body.appendChild(script);
-</script>
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    </script>
+</body>
 
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics-compat.js"></script>
-
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import {
-        initializeApp
-    } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-    import {
-        getAnalytics
-    } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
-    import {
-        getAuth
-    } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-        apiKey: "AIzaSyCTdIrjIZVlIOfurM15BL9kEIKp7XwTX9o",
-        authDomain: "barry-s-schoolhouse-escape.firebaseapp.com",
-        projectId: "barry-s-schoolhouse-escape",
-        storageBucket: "barry-s-schoolhouse-escape.appspot.com",
-        messagingSenderId: "682550133157",
-        appId: "1:682550133157:web:b83d19a0e710360ac7a84c",
-        measurementId: "G-MZRYWNCEPM"
-    };
-
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-        window.dataLayer.push(arguments);
-    }
-
-    window.gtag("config", firebaseConfig.measurementId, {
-        cookie_domain: window.location.hostname,
-        cookie_flags: "SameSite=None;Secure",
-    });
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-</script>
 
 </html>
