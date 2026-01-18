@@ -1,0 +1,169 @@
+{
+  "m_LocatorId": "AddressablesMainContentCatalog",
+  "m_BuildResultHash": "e1745c3509ca09d728c12900c1798513",
+  "m_InstanceProviderData": {
+    "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider",
+    "m_ObjectType": {
+      "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider"
+    },
+    "m_Data": ""
+  },
+  "m_SceneProviderData": {
+    "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.SceneProvider",
+    "m_ObjectType": {
+      "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.SceneProvider"
+    },
+    "m_Data": ""
+  },
+  "m_ResourceProviderData": [
+    {
+      "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider",
+      "m_ObjectType": {
+        "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider"
+      },
+      "m_Data": ""
+    },
+    {
+      "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider",
+      "m_ObjectType": {
+        "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider"
+      },
+      "m_Data": ""
+    },
+    {
+      "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider",
+      "m_ObjectType": {
+        "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider"
+      },
+      "m_Data": ""
+    },
+    {
+      "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider",
+      "m_ObjectType": {
+        "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider"
+      },
+      "m_Data": ""
+    },
+    {
+      "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider",
+      "m_ObjectType": {
+        "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider"
+      },
+      "m_Data": ""
+    },
+    {
+      "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.AtlasSpriteProvider",
+      "m_ObjectType": {
+        "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.AtlasSpriteProvider"
+      },
+      "m_Data": ""
+    }
+  ],
+  "m_ProviderIds": [
+    "",
+    "UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider",
+    "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider",
+    "UnityEngine.ResourceManagement.ResourceProviders.LegacyResourcesProvider"
+  ],
+  "m_InternalIds": [
+    "_Client_/Scenes/Global/scene_context",
+    "_Client_/Scenes/Levels/scene_main_01",
+    "{UnityEngine.AddressableAssets.Addressables.RuntimePath}/WebGL/models_character_default_skin_assets_all_86177613656cb091fbf9bcfcda574180.bundle",
+    "{UnityEngine.AddressableAssets.Addressables.RuntimePath}/WebGL/models_characters_skins_assets_all_b637f7b1719e759f473bb062b27316ff.bundle",
+    "{UnityEngine.AddressableAssets.Addressables.RuntimePath}/WebGL/music_assets_all_b79a975ec6484c9eb2f71a72cb18b2b0.bundle",
+    "{UnityEngine.AddressableAssets.Addressables.RuntimePath}/WebGL/sprites_characters_skins_assets_all_19cbcc211849e706f21bf6da90cb01ba.bundle",
+    "{UnityEngine.AddressableAssets.Addressables.RuntimePath}/WebGL/sprites_units_icons_assets_all_58738337ead07ecba01ad4ee900b2e9c.bundle",
+    "Assets/_Client_/Art/Prefabs/Characters/p_graphic_skin_cat.prefab",
+    "Assets/_Client_/Art/Prefabs/Characters/p_graphic_skin_default.prefab",
+    "Assets/_Client_/Art/Prefabs/Characters/p_graphic_skin_dog.prefab",
+    "Assets/_Client_/Art/Prefabs/Characters/p_graphic_skin_female_01.prefab",
+    "Assets/_Client_/Art/Prefabs/Characters/p_graphic_skin_labubu.prefab",
+    "Assets/_Client_/Art/Prefabs/Characters/p_graphic_skin_skeleton.prefab",
+    "Assets/_Client_/Art/Prefabs/Characters/p_graphic_skin_squid_01.prefab",
+    "Assets/_Client_/Art/Prefabs/Characters/p_graphic_skin_tralalero.prefab",
+    "Assets/_Client_/Atlases/atlas_units.spriteatlasv2",
+    "Assets/_Client_/Sounds/Music/music_main.wav",
+    "Assets/_Client_/Sprites/Skins/sprite_ui_icon_Skin_Cat.png",
+    "Assets/_Client_/Sprites/Skins/sprite_ui_icon_Skin_default_men.png",
+    "Assets/_Client_/Sprites/Skins/sprite_ui_icon_Skin_Dog.png",
+    "Assets/_Client_/Sprites/Skins/sprite_ui_icon_Skin_Female_01.png",
+    "Assets/_Client_/Sprites/Skins/sprite_ui_icon_Skin_Labubu.png",
+    "Assets/_Client_/Sprites/Skins/sprite_ui_icon_Skin_Skeleton.png",
+    "Assets/_Client_/Sprites/Skins/sprite_ui_icon_Skin_Squid_01.png",
+    "Assets/_Client_/Sprites/Skins/sprite_ui_icon_Skin_Tralalero.png",
+    "DOTweenSettings",
+    "LineBreaking Following Characters",
+    "LineBreaking Leading Characters",
+    "SettingsYG2",
+    "Sirenix/GlobalSerializationConfig",
+    "Style Sheets/Default Style Sheet",
+    "TMP Settings"
+  ],
+  "m_KeyDataString": "PQAAAAANAAAAc2NlbmVfY29udGV4dAAgAAAAMzNhMWU0MzgzNmQwZDIxNDJhYzM3NWFiNGEyZTE2OTYEAAAAAAANAAAAc2NlbmVfbWFpbl8wMQAgAAAANDM1ZmJiN2I1YzRlMzc0NDU4ZmNhNmI0Njg0NTAzZTQEAQAAAABQAAAAbW9kZWxzX2NoYXJhY3Rlcl9kZWZhdWx0X3NraW5fYXNzZXRzX2FsbF84NjE3NzYxMzY1NmNiMDkxZmJmOWJjZmNkYTU3NDE4MC5idW5kbGUASgAAAG1vZGVsc19jaGFyYWN0ZXJzX3NraW5zX2Fzc2V0c19hbGxfYjYzN2Y3YjE3MTllNzU5ZjQ3M2JiMDYyYjI3MzE2ZmYuYnVuZGxlADgAAABtdXNpY19hc3NldHNfYWxsX2I3OWE5NzVlYzY0ODRjOWViMmY3MWE3MmNiMThiMmIwLmJ1bmRsZQBLAAAAc3ByaXRlc19jaGFyYWN0ZXJzX3NraW5zX2Fzc2V0c19hbGxfMTljYmNjMjExODQ5ZTcwNmYyMWJmNmRhOTBjYjAxYmEuYnVuZGxlAEYAAABzcHJpdGVzX3VuaXRzX2ljb25zX2Fzc2V0c19hbGxfNTg3MzgzMzdlYWQwN2VjYmEwMWFkNGVlOTAwYjJlOWMuYnVuZGxlABIAAABwX2dyYXBoaWNfc2tpbl9jYXQAIAAAADI1ZmQ5ZDdhNTZlNmU0NDQxOTdkMDVjYzUzZjllODg0ABYAAABwX2dyYXBoaWNfc2tpbl9kZWZhdWx0ACAAAAAwOWMwNGJkZGI3ZWIxN2U0Y2FkOTY4OTMzYWY4YWFkNQASAAAAcF9ncmFwaGljX3NraW5fZG9nACAAAAA5Y2E2NWJiZjU5YzA1Y2Q0YmE5MTk5Zjc3MjZmODg4YwAYAAAAcF9ncmFwaGljX3NraW5fZmVtYWxlXzAxACAAAABiYTMxOGUxZDJiMTkyYTA0NmE1MTE0MzQ5MGEzZDY1ZAAVAAAAcF9ncmFwaGljX3NraW5fbGFidWJ1ACAAAABmM2IxNmExYWMxN2E2YmU0M2E0OTM5YjVmYzE1ODdjZQAXAAAAcF9ncmFwaGljX3NraW5fc2tlbGV0b24AIAAAAGI1MTU3ZGM3Y2ZlNDJmZTQyOTU3YTRkY2E4MmY3MjkxABcAAABwX2dyYXBoaWNfc2tpbl9zcXVpZF8wMQAgAAAANDJhOGQ2YmM4NGMxNTk4NDdhYmJlM2VkMDVmY2ZlZmUAGAAAAHBfZ3JhcGhpY19za2luX3RyYWxhbGVybwAgAAAAMzA3NGZhYzI4YWQyNTcwNGZiNjQyZDY5NmU3YmIwNzQACwAAAGF0bGFzX3VuaXRzACAAAAAyNzRjZGI4NzUyNjVkNmM0NGI4NmFkNDMyOWRiN2I0MgAKAAAAbXVzaWNfbWFpbgAgAAAANTUyNjk4ZGU0NzhhZmQ5NDk4ZGM2N2Q2YWRkNjM2ZDkAFwAAAHNwcml0ZV91aV9pY29uX1NraW5fQ2F0ACAAAABmYjUwMjMyYzEyM2QxOWI0ZTg4YmNiNjIwYmU3YzVmNQAfAAAAc3ByaXRlX3VpX2ljb25fU2tpbl9kZWZhdWx0X21lbgAgAAAAYTVlMjQ1YTBlMmFmYzU3NGQ4NzlkODRmMzEyODkxNDAAFwAAAHNwcml0ZV91aV9pY29uX1NraW5fRG9nACAAAABkMjc4MDA1MTQzZTU2MDY0NzhmOTY1YTAwYjBiODg4OQAdAAAAc3ByaXRlX3VpX2ljb25fU2tpbl9GZW1hbGVfMDEAIAAAADBhZjlmYzIzYzg0MjBjZDRmYmQzNjM2YTM2OGUzMTc0ABoAAABzcHJpdGVfdWlfaWNvbl9Ta2luX0xhYnVidQAgAAAANTg3YTY3YWRjODA2MTVmNDg4MGJlOWQ2ZmEwOGY2MDMAHAAAAHNwcml0ZV91aV9pY29uX1NraW5fU2tlbGV0b24AIAAAAGY4ZmVmMzgyZGU4NjNjNTQzYjlkYjQ3ZGE4Y2NiMWRhABwAAABzcHJpdGVfdWlfaWNvbl9Ta2luX1NxdWlkXzAxACAAAAA1ZjcyZmViNmE1MjZjM2M0YTllNThkZGE5MjFkN2Y1YgAdAAAAc3ByaXRlX3VpX2ljb25fU2tpbl9UcmFsYWxlcm8AIAAAADZjYzY3MzdlNjE5NWMzNDQzYWFhNmYxNWI5MDY4ZTYyAA8AAABET1R3ZWVuU2V0dGluZ3MAIAAAADk4NmNlMzI2ZjdmYTZkOTQwOGMwOWQ2MjFhYTgxZjViACEAAABMaW5lQnJlYWtpbmcgRm9sbG93aW5nIENoYXJhY3RlcnMAIAAAAGZhZGU0MmU4YmM3MTRiMDE4ZmFjNTEzYzA0M2QzMjNiAB8AAABMaW5lQnJlYWtpbmcgTGVhZGluZyBDaGFyYWN0ZXJzACAAAABkODJjMWIzMWM3ZTc0MjM5YmZmMTIyMDU4NTcwN2QyYgALAAAAU2V0dGluZ3NZRzIAIAAAAGE4MjlhN2YyYzk1MTU1NzRiODA2N2Q4OTI5MGI4ZjZhACEAAABTaXJlbml4L0dsb2JhbFNlcmlhbGl6YXRpb25Db25maWcAIAAAADRkYTJjZmYxYjQyZGVhOTRkODIyZWJmNjlkOTYzNjJlACAAAABTdHlsZSBTaGVldHMvRGVmYXVsdCBTdHlsZSBTaGVldAAgAAAAZjk1MmMwODJjYjAzNDUxZGFlZDNlZTk2OGFjNmM2M2UADAAAAFRNUCBTZXR0aW5ncwAgAAAAM2Y1YjVkZmY2N2E5NDIyODlhOWRlZmE0MTZiMjA2ZjM=",
+  "m_BucketDataString": "PQAAAAQAAAABAAAAAAAAABYAAAABAAAAAAAAADsAAAABAAAAAAAAAEAAAAABAAAAAQAAAFIAAAABAAAAAQAAAHcAAAABAAAAAQAAAHwAAAABAAAAAgAAANEAAAABAAAAAwAAACABAAABAAAABAAAAF0BAAABAAAABQAAAK0BAAABAAAABgAAAPgBAAABAAAABwAAAA8CAAABAAAABwAAADQCAAABAAAACAAAAE8CAAABAAAACAAAAHQCAAABAAAACQAAAIsCAAABAAAACQAAALACAAABAAAACgAAAM0CAAABAAAACgAAAPICAAABAAAACwAAAAwDAAABAAAACwAAADEDAAABAAAADAAAAE0DAAABAAAADAAAAHIDAAABAAAADQAAAI4DAAABAAAADQAAALMDAAABAAAADgAAANADAAABAAAADgAAAPUDAAACAAAADwAAABAAAAAFBAAAAgAAAA8AAAAQAAAAKgQAAAEAAAARAAAAOQQAAAEAAAARAAAAXgQAAAIAAAASAAAAEwAAAHoEAAACAAAAEgAAABMAAACfBAAAAgAAABQAAAAVAAAAwwQAAAIAAAAUAAAAFQAAAOgEAAACAAAAFgAAABcAAAAEBQAAAgAAABYAAAAXAAAAKQUAAAIAAAAYAAAAGQAAAEsFAAACAAAAGAAAABkAAABwBQAAAgAAABoAAAAbAAAAjwUAAAIAAAAaAAAAGwAAALQFAAACAAAAHAAAAB0AAADVBQAAAgAAABwAAAAdAAAA+gUAAAIAAAAeAAAAHwAAABsGAAACAAAAHgAAAB8AAABABgAAAgAAACAAAAAhAAAAYgYAAAIAAAAgAAAAIQAAAIcGAAABAAAAIgAAAJsGAAABAAAAIgAAAMAGAAABAAAAIwAAAOYGAAABAAAAIwAAAAsHAAABAAAAJAAAAC8HAAABAAAAJAAAAFQHAAABAAAAJQAAAGQHAAABAAAAJQAAAIkHAAABAAAAJgAAAK8HAAABAAAAJgAAANQHAAABAAAAJwAAAPkHAAABAAAAJwAAAB4IAAABAAAAKAAAAC8IAAABAAAAKAAAAA==",
+  "m_EntryDataString": "KQAAAAAAAAAAAAAA/////wAAAAD/////AAAAAAAAAAABAAAAAAAAAP////8AAAAA/////wMAAAAAAAAAAgAAAAEAAAD/////AAAAAAAAAAAGAAAAAQAAAAMAAAABAAAA/////wAAAABHAwAABwAAAAEAAAAEAAAAAQAAAP////8AAAAAkgYAAAgAAAABAAAABQAAAAEAAAD/////AAAAAN0JAAAJAAAAAQAAAAYAAAABAAAA/////wAAAAAmDQAACgAAAAEAAAAHAAAAAgAAAAcAAAAHEMdL/////wsAAAACAAAACAAAAAIAAAAGAAAAG4cjkv////8NAAAAAgAAAAkAAAACAAAABwAAAAcQx0v/////DwAAAAIAAAAKAAAAAgAAAAcAAAAHEMdL/////xEAAAACAAAACwAAAAIAAAAHAAAABxDHS/////8TAAAAAgAAAAwAAAACAAAABwAAAAcQx0v/////FQAAAAIAAAANAAAAAgAAAAcAAAAHEMdL/////xcAAAACAAAADgAAAAIAAAAHAAAABxDHS/////8ZAAAAAgAAAA8AAAACAAAACgAAAFofcQ//////GwAAAAMAAAAPAAAAAgAAAAoAAABaH3EP/////xsAAAAEAAAAEAAAAAIAAAAIAAAAXT33Uv////8dAAAABQAAABEAAAACAAAACQAAAJ0qOuL/////HwAAAAQAAAARAAAAAgAAAAkAAACdKjri/////x8AAAAGAAAAEgAAAAIAAAAJAAAAnSo64v////8hAAAABAAAABIAAAACAAAACQAAAJ0qOuL/////IQAAAAYAAAATAAAAAgAAAAkAAACdKjri/////yMAAAAEAAAAEwAAAAIAAAAJAAAAnSo64v////8jAAAABgAAABQAAAACAAAACQAAAJ0qOuL/////JQAAAAQAAAAUAAAAAgAAAAkAAACdKjri/////yUAAAAGAAAAFQAAAAIAAAAJAAAAnSo64v////8nAAAABAAAABUAAAACAAAACQAAAJ0qOuL/////JwAAAAYAAAAWAAAAAgAAAAkAAACdKjri/////ykAAAAEAAAAFgAAAAIAAAAJAAAAnSo64v////8pAAAABgAAABcAAAACAAAACQAAAJ0qOuL/////KwAAAAQAAAAXAAAAAgAAAAkAAACdKjri/////ysAAAAGAAAAGAAAAAIAAAAJAAAAnSo64v////8tAAAABAAAABgAAAACAAAACQAAAJ0qOuL/////LQAAAAYAAAAZAAAAAwAAAP////8AAAAA/////y8AAAAHAAAAGgAAAAMAAAD/////AAAAAP////8xAAAACAAAABsAAAADAAAA/////wAAAAD/////MwAAAAgAAAAcAAAAAwAAAP////8AAAAA/////zUAAAAJAAAAHQAAAAMAAAD/////AAAAAP////83AAAACgAAAB4AAAADAAAA/////wAAAAD/////OQAAAAsAAAAfAAAAAwAAAP////8AAAAA/////zsAAAAMAAAA",
+  "m_ExtraDataString": "B0xVbml0eS5SZXNvdXJjZU1hbmFnZXIsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsSlVuaXR5RW5naW5lLlJlc291cmNlTWFuYWdlbWVudC5SZXNvdXJjZVByb3ZpZGVycy5Bc3NldEJ1bmRsZVJlcXVlc3RPcHRpb25zqgIAAHsAIgBtAF8ASABhAHMAaAAiADoAIgA4ADYAMQA3ADcANgAxADMANgA1ADYAYwBiADAAOQAxAGYAYgBmADkAYgBjAGYAYwBkAGEANQA3ADQAMQA4ADAAIgAsACIAbQBfAEMAcgBjACIAOgA1ADIAMwA4ADQAMAA4ADYANwAsACIAbQBfAFQAaQBtAGUAbwB1AHQAIgA6ADAALAAiAG0AXwBDAGgAdQBuAGsAZQBkAFQAcgBhAG4AcwBmAGUAcgAiADoAZgBhAGwAcwBlACwAIgBtAF8AUgBlAGQAaQByAGUAYwB0AEwAaQBtAGkAdAAiADoALQAxACwAIgBtAF8AUgBlAHQAcgB5AEMAbwB1AG4AdAAiADoAMAAsACIAbQBfAEIAdQBuAGQAbABlAE4AYQBtAGUAIgA6ACIAYQAxAGEAZAAzADIANABhADEAOQBmAGUANgA5ADcANABkADMAMQBlADUAMQAwADQAZgA0ADkAOAAwADgAYgAwACIALAAiAG0AXwBBAHMAcwBlAHQATABvAGEAZABNAG8AZABlACIAOgAwACwAIgBtAF8AQgB1AG4AZABsAGUAUwBpAHoAZQAiADoAMQA5ADcAMAAwACwAIgBtAF8AVQBzAGUAQwByAGMARgBvAHIAQwBhAGMAaABlAGQAQgB1AG4AZABsAGUAcwAiADoAdAByAHUAZQAsACIAbQBfAFUAcwBlAFUAVwBSAEYAbwByAEwAbwBjAGEAbABCAHUAbgBkAGwAZQBzACIAOgBmAGEAbABzAGUALAAiAG0AXwBDAGwAZQBhAHIATwB0AGgAZQByAEMAYQBjAGgAZQBkAFYAZQByAHMAaQBvAG4AcwBXAGgAZQBuAEwAbwBhAGQAZQBkACIAOgBmAGEAbABzAGUAfQAHTFVuaXR5LlJlc291cmNlTWFuYWdlciwgVmVyc2lvbj0wLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGxKVW5pdHlFbmdpbmUuUmVzb3VyY2VNYW5hZ2VtZW50LlJlc291cmNlUHJvdmlkZXJzLkFzc2V0QnVuZGxlUmVxdWVzdE9wdGlvbnOuAgAAewAiAG0AXwBIAGEAcwBoACIAOgAiAGIANgAzADcAZgA3AGIAMQA3ADEAOQBlADcANQA5AGYANAA3ADMAYgBiADAANgAyAGIAMgA3ADMAMQA2AGYAZgAiACwAIgBtAF8AQwByAGMAIgA6ADIAMQA3ADIAMwA4ADkANAA1ADcALAAiAG0AXwBUAGkAbQBlAG8AdQB0ACIAOgAwACwAIgBtAF8AQwBoAHUAbgBrAGUAZABUAHIAYQBuAHMAZgBlAHIAIgA6AGYAYQBsAHMAZQAsACIAbQBfAFIAZQBkAGkAcgBlAGMAdABMAGkAbQBpAHQAIgA6AC0AMQAsACIAbQBfAFIAZQB0AHIAeQBDAG8AdQBuAHQAIgA6ADAALAAiAG0AXwBCAHUAbgBkAGwAZQBOAGEAbQBlACIAOgAiAGEAMgA5ADYAMgA0ADMAMQA2ADQAMwBjADQAMQA3ADkANAA0AGYAOAA5ADEANAA4ADgANQBiAGYAZAA5AGMANwAiACwAIgBtAF8AQQBzAHMAZQB0AEwAbwBhAGQATQBvAGQAZQAiADoAMAAsACIAbQBfAEIAdQBuAGQAbABlAFMAaQB6AGUAIgA6ADEANAA2ADgANwA5ACwAIgBtAF8AVQBzAGUAQwByAGMARgBvAHIAQwBhAGMAaABlAGQAQgB1AG4AZABsAGUAcwAiADoAdAByAHUAZQAsACIAbQBfAFUAcwBlAFUAVwBSAEYAbwByAEwAbwBjAGEAbABCAHUAbgBkAGwAZQBzACIAOgBmAGEAbABzAGUALAAiAG0AXwBDAGwAZQBhAHIATwB0AGgAZQByAEMAYQBjAGgAZQBkAFYAZQByAHMAaQBvAG4AcwBXAGgAZQBuAEwAbwBhAGQAZQBkACIAOgBmAGEAbABzAGUAfQAHTFVuaXR5LlJlc291cmNlTWFuYWdlciwgVmVyc2lvbj0wLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGxKVW5pdHlFbmdpbmUuUmVzb3VyY2VNYW5hZ2VtZW50LlJlc291cmNlUHJvdmlkZXJzLkFzc2V0QnVuZGxlUmVxdWVzdE9wdGlvbnOuAgAAewAiAG0AXwBIAGEAcwBoACIAOgAiAGIANwA5AGEAOQA3ADUAZQBjADYANAA4ADQAYwA5AGUAYgAyAGYANwAxAGEANwAyAGMAYgAxADgAYgAyAGIAMAAiACwAIgBtAF8AQwByAGMAIgA6ADEAOAAxADEANAA1ADAAMAAyADAALAAiAG0AXwBUAGkAbQBlAG8AdQB0ACIAOgAwACwAIgBtAF8AQwBoAHUAbgBrAGUAZABUAHIAYQBuAHMAZgBlAHIAIgA6AGYAYQBsAHMAZQAsACIAbQBfAFIAZQBkAGkAcgBlAGMAdABMAGkAbQBpAHQAIgA6AC0AMQAsACIAbQBfAFIAZQB0AHIAeQBDAG8AdQBuAHQAIgA6ADAALAAiAG0AXwBCAHUAbgBkAGwAZQBOAGEAbQBlACIAOgAiADMAZQBkADIANwAzAGIAYQBhAGEAYwBkADUAYgBhADIAOQBiADkAZgA5AGEAYwAyAGYAZgBhADUAYQAxADcAMgAiACwAIgBtAF8AQQBzAHMAZQB0AEwAbwBhAGQATQBvAGQAZQAiADoAMAAsACIAbQBfAEIAdQBuAGQAbABlAFMAaQB6AGUAIgA6ADUAMwA2ADQAOQA3ACwAIgBtAF8AVQBzAGUAQwByAGMARgBvAHIAQwBhAGMAaABlAGQAQgB1AG4AZABsAGUAcwAiADoAdAByAHUAZQAsACIAbQBfAFUAcwBlAFUAVwBSAEYAbwByAEwAbwBjAGEAbABCAHUAbgBkAGwAZQBzACIAOgBmAGEAbABzAGUALAAiAG0AXwBDAGwAZQBhAHIATwB0AGgAZQByAEMAYQBjAGgAZQBkAFYAZQByAHMAaQBvAG4AcwBXAGgAZQBuAEwAbwBhAGQAZQBkACIAOgBmAGEAbABzAGUAfQAHTFVuaXR5LlJlc291cmNlTWFuYWdlciwgVmVyc2lvbj0wLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGxKVW5pdHlFbmdpbmUuUmVzb3VyY2VNYW5hZ2VtZW50LlJlc291cmNlUHJvdmlkZXJzLkFzc2V0QnVuZGxlUmVxdWVzdE9wdGlvbnOsAgAAewAiAG0AXwBIAGEAcwBoACIAOgAiADEAOQBjAGIAYwBjADIAMQAxADgANAA5AGUANwAwADYAZgAyADEAYgBmADYAZABhADkAMABjAGIAMAAxAGIAYQAiACwAIgBtAF8AQwByAGMAIgA6ADIANAA1ADYANQA3ADMANAAyADAALAAiAG0AXwBUAGkAbQBlAG8AdQB0ACIAOgAwACwAIgBtAF8AQwBoAHUAbgBrAGUAZABUAHIAYQBuAHMAZgBlAHIAIgA6AGYAYQBsAHMAZQAsACIAbQBfAFIAZQBkAGkAcgBlAGMAdABMAGkAbQBpAHQAIgA6AC0AMQAsACIAbQBfAFIAZQB0AHIAeQBDAG8AdQBuAHQAIgA6ADAALAAiAG0AXwBCAHUAbgBkAGwAZQBOAGEAbQBlACIAOgAiADMAMgA1AGYANgBiADIANgA4AGMANAA4AGQAZgAzADIANgA5AGQAYgAwAGYAMgA1ADIAMAA3AGQAMwBhAGYAOQAiACwAIgBtAF8AQQBzAHMAZQB0AEwAbwBhAGQATQBvAGQAZQAiADoAMAAsACIAbQBfAEIAdQBuAGQAbABlAFMAaQB6AGUAIgA6ADcANgAxADcANgAsACIAbQBfAFUAcwBlAEMAcgBjAEYAbwByAEMAYQBjAGgAZQBkAEIAdQBuAGQAbABlAHMAIgA6AHQAcgB1AGUALAAiAG0AXwBVAHMAZQBVAFcAUgBGAG8AcgBMAG8AYwBhAGwAQgB1AG4AZABsAGUAcwAiADoAZgBhAGwAcwBlACwAIgBtAF8AQwBsAGUAYQByAE8AdABoAGUAcgBDAGEAYwBoAGUAZABWAGUAcgBzAGkAbwBuAHMAVwBoAGUAbgBMAG8AYQBkAGUAZAAiADoAZgBhAGwAcwBlAH0AB0xVbml0eS5SZXNvdXJjZU1hbmFnZXIsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsSlVuaXR5RW5naW5lLlJlc291cmNlTWFuYWdlbWVudC5SZXNvdXJjZVByb3ZpZGVycy5Bc3NldEJ1bmRsZVJlcXVlc3RPcHRpb25zrgIAAHsAIgBtAF8ASABhAHMAaAAiADoAIgA1ADgANwAzADgAMwAzADcAZQBhAGQAMAA3AGUAYwBiAGEAMAAxAGEAZAA0AGUAZQA5ADAAMABiADIAZQA5AGMAIgAsACIAbQBfAEMAcgBjACIAOgAyADkANQA2ADAAOAA2ADgAOQAyACwAIgBtAF8AVABpAG0AZQBvAHUAdAAiADoAMAAsACIAbQBfAEMAaAB1AG4AawBlAGQAVAByAGEAbgBzAGYAZQByACIAOgBmAGEAbABzAGUALAAiAG0AXwBSAGUAZABpAHIAZQBjAHQATABpAG0AaQB0ACIAOgAtADEALAAiAG0AXwBSAGUAdAByAHkAQwBvAHUAbgB0ACIAOgAwACwAIgBtAF8AQgB1AG4AZABsAGUATgBhAG0AZQAiADoAIgBjADgAZAA5ADIAZQA2ADUANwAzAGMAMAA5ADAANwA5ADEAYgA0AGYAZAA1AGMANQBiAGYANwA1ADMAMAAyADUAIgAsACIAbQBfAEEAcwBzAGUAdABMAG8AYQBkAE0AbwBkAGUAIgA6ADAALAAiAG0AXwBCAHUAbgBkAGwAZQBTAGkAegBlACIAOgAxADEANAA5ADIAMQAsACIAbQBfAFUAcwBlAEMAcgBjAEYAbwByAEMAYQBjAGgAZQBkAEIAdQBuAGQAbABlAHMAIgA6AHQAcgB1AGUALAAiAG0AXwBVAHMAZQBVAFcAUgBGAG8AcgBMAG8AYwBhAGwAQgB1AG4AZABsAGUAcwAiADoAZgBhAGwAcwBlACwAIgBtAF8AQwBsAGUAYQByAE8AdABoAGUAcgBDAGEAYwBoAGUAZABWAGUAcgBzAGkAbwBuAHMAVwBoAGUAbgBMAG8AYQBkAGUAZAAiADoAZgBhAGwAcwBlAH0A",
+  "m_resourceTypes": [
+    {
+      "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.SceneInstance"
+    },
+    {
+      "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.IAssetBundleResource"
+    },
+    {
+      "m_AssemblyName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.GameObject"
+    },
+    {
+      "m_AssemblyName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.U2D.SpriteAtlas"
+    },
+    {
+      "m_AssemblyName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.Texture2D"
+    },
+    {
+      "m_AssemblyName": "UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.AudioClip"
+    },
+    {
+      "m_AssemblyName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.Sprite"
+    },
+    {
+      "m_AssemblyName": "DOTween, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "DG.Tweening.Core.DOTweenSettings"
+    },
+    {
+      "m_AssemblyName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.TextAsset"
+    },
+    {
+      "m_AssemblyName": "Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "YG.InfoYG"
+    },
+    {
+      "m_AssemblyName": "Sirenix.Serialization.Config, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "Sirenix.Serialization.GlobalSerializationConfig"
+    },
+    {
+      "m_AssemblyName": "Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "TMPro.TMP_StyleSheet"
+    },
+    {
+      "m_AssemblyName": "Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "TMPro.TMP_Settings"
+    }
+  ],
+  "m_InternalIdPrefixes": []
+}
