@@ -2,20 +2,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+    <base href="https://cdn.jsdelivr.net/gh/marty-games/mga-unity@main/1v1-lol/">
     <meta charset="utf-8">
     <title>1v1.LOL</title>
 
     <!-- Unity scripts -->
-    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/UnityProgress.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.js"></script>
+    <script src="UnityProgress.js"></script>
+    <script src="2.7.js"></script>
 
     <!-- Firebase core -->
-    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-app.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-auth.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-firestore.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1login.js?v=2"></script>
-    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firestore.js"></script>
+    <script src="1firebase-app.js"></script>
+    <script src="1firebase-auth.js"></script>
+    <script src="1firebase-firestore.js"></script>
+    <script src="1firebase.js"></script>
+    <script src="1login.js?v=2"></script>
+    <script src="1firestore.js"></script>
 
     <style>
         html, body {
@@ -50,7 +51,7 @@
         window.onload = function () {
             gameInstance = UnityLoader.instantiate(
                 "gameContainer",
-                "https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.json",
+                "2.7.json",
                 {
                     onProgress: UnityProgress,
                     Module: {
