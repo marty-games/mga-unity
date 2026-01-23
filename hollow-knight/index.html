@@ -1,168 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-    <base href="https://cdn.jsdelivr.net/gh/web-ports/hollow-knight@latest/">
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Hollow Knight</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            background: #231F20;
-        }
-
-        #unity-container {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-    </style>
+<base href="https://cdn.jsdelivr.net/gh/aukak/hollow-knight@latest/">
+<meta charset="utf-8">
+<title>Unity WebGL Player | Hollow Knight</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{background:#000;overflow:hidden}#loading-text{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font:24px Arial}#unity-canvas{width:100vw;height:100vh;display:block}#unity-mobile-warning{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;background:rgba(0,0,0,.9);padding:20px;border-radius:8px;font:14px Arial}#fps-graph{position:fixed;top:12px;left:12px;width:200px;height:70px;background:rgba(0,0,0,.8);border-radius:6px;padding:10px;z-index:9999;transition:.3s}#fps-canvas{width:100%;height:100%;display:block}.savebtn{position:fixed;top:12px;right:12px;padding:10px 18px;cursor:pointer;background:rgba(50,50,50,.85);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:6px;font:14px Arial;z-index:9999;transition:.3s}.savebtn:hover{background:rgba(70,70,70,.95)}.hidden{opacity:0;pointer-events:none}
+</style>
 </head>
-
 <body>
-    <div id="loading-text" style="color: white; font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;"> LOADING... </div>
-    <div hidden id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas"></canvas>
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-                <div id="unity-progress-bar-full"></div>
-            </div>
-        </div>
-        <div id="unity-mobile-warning"> WebGL builds are not supported on mobile devices. </div>
-    </div>
-    <script>
-        var loadingText = document.querySelector("#loading-text");
-        let totalBytes = 0;
-        let loadedBytes = 0;
-        async function getSize(url) {
-            try {
-                const res = await fetch(url, {
-                    method: "HEAD"
-                });
-                return parseInt(res.headers.get("Content-Length") || "0", 10);
-            } catch {
-                return 0;
-            }
-        }
-        async function fetchWithProgress(url) {
-            const response = await fetch(url);
-            const reader = response.body.getReader();
-            let chunks = [];
-            let received = 0;
-            while (true) {
-                const {
-                    done,
-                    value
-                } = await reader.read();
-                if (done) break;
-                received += value.length;
-                loadedBytes += value.length;
-                chunks.push(value);
-                let mbDone = (loadedBytes / (1024 * 1024)).toFixed(2);
-                let mbTotal = '860.36';
-                loadingText.textContent = `LOADING... ${mbDone} MB / ${mbTotal} MB`;
-            }
-            let fullBuffer = new Uint8Array(received);
-            let offset = 0;
-            for (let chunk of chunks) {
-                fullBuffer.set(chunk, offset);
-                offset += chunk.length;
-            }
-            return fullBuffer.buffer;
-        }
-        async function mergeFiles(fileParts) {
-            const buffers = await Promise.all(fileParts.map(part => fetchWithProgress(part)));
-            const mergedBlob = new Blob(buffers);
-            return URL.createObjectURL(mergedBlob);
-        }
-
-        function getParts(file, start, end) {
-            let parts = [];
-            for (let i = start; i <= end; i++) {
-                parts.push(file + ".part" + i);
-            }
-            return parts;
-        }
-        (async () => {
-            const allParts = [...getParts("Build/hk.data", 1, 42), ...getParts("Build/hk.wasm", 1, 2), ];
-            const sizes = await Promise.all(allParts.map(getSize));
-            totalBytes = sizes.reduce((a, b) => a + b, 0);
-            const [dataUrl, wasmurl] = await Promise.all([
-                mergeFiles(getParts("Build/hk.data", 1, 42)),
-                mergeFiles(getParts("Build/hk.wasm", 1, 2)),
-            ]);
-            var buildUrl = "Build";
-            var loaderUrl = buildUrl + "/hk.loader.js";
-            var config = {
-                dataUrl: dataUrl,
-                frameworkUrl: buildUrl + "/hk.framework.js",
-                codeUrl: wasmurl,
-                streamingAssetsUrl: "StreamingAssets",
-                companyName: "Marty Games",
-                productName: "Hollow Knight",
-                productVersion: "1.0",
-            };
-            var container = document.querySelector("#unity-container");
-            container.hidden = false;
-            var canvas = document.querySelector("#unity-canvas");
-            var loadingBar = document.querySelector("#unity-loading-bar");
-            var progressBarFull = document.querySelector("#unity-progress-bar-full");
-            var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-            var mobileWarning = document.querySelector("#unity-mobile-warning");
-            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                container.className = "unity-mobile";
-                config.devicePixelRatio = 1;
-                mobileWarning.style.display = "block";
-                setTimeout(() => {
-                    mobileWarning.style.display = "none";
-                }, 5000);
-            } else {
-              if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                var meta = document.createElement('meta');
-                meta.name = 'viewport';
-                meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-                document.getElementsByTagName('head')[0].appendChild(meta);
-                container.className = "unity-mobile";
-                canvas.className = "unity-mobile";
-            } else {
-                function resizeCanvas() {
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
-                    canvas.style.width = window.innerWidth + "px";
-                    canvas.style.height = window.innerHeight + "px";
-                }
-                resizeCanvas();
-                window.addEventListener('resize', resizeCanvas);
-            }
-            }
-            loadingBar.style.display = "block";
-            var script = document.createElement("script");
-            script.src = loaderUrl;
-            script.onload = () => {
-                createUnityInstance(canvas, config, (progress) => {
-                    progressBarFull.style.width = 100 * progress + "%";
-                }).then((unityInstance) => {
-                  loadingText.remove();
-                    loadingBar.style.display = "none";
-                    canvas.style.display = "block";
-                }).catch((message) => {
-                    alert(message);
-                });
-            };
-            document.body.appendChild(script);
-        })();
-    </script>
+<div id="loading-text">truffed.lol</div>
+<div id="unity-mobile-warning">WebGL not supported on mobile</div>
+<canvas id="unity-canvas"></canvas>
+<div id="fps-graph" style="display:none"><canvas id="fps-canvas"></canvas></div>
+  
+<script>
+alert("port by bog")
+const lt=document.getElementById("loading-text"),cv=document.getElementById("unity-canvas"),mw=document.getElementById("unity-mobile-warning"),fg=document.getElementById("fps-graph"),fc=document.getElementById("fps-canvas");let lb=0,hd=false,tm_id;const tm='912.81',fh=[],ml=90;fc.width=180;fc.height=50;const ctx=fc.getContext('2d');let lft=performance.now(),fr=0,fps=60,sb;function uf(){const nt=performance.now(),dt=(nt-lft)/1000;lft=nt;fps=dt>0?1/dt:60;fr++;if(fr%3===0){fh.push(fps);if(fh.length>ml)fh.shift();ctx.clearRect(0,0,180,50);for(let i=0;i<fh.length;i++){const f=fh[i],h=Math.min(f/60,1)*35,c=f>50?'#0f0':f>30?'#fa0':'#f33';ctx.fillStyle=c;ctx.fillRect(i*2,50-h,1.8,h);}ctx.fillStyle='#fff';ctx.font='bold 13px monospace';ctx.shadowColor='#000';ctx.shadowBlur=4;ctx.fillText(Math.round(fps)+' FPS',6,16);ctx.shadowBlur=0;}requestAnimationFrame(uf);}function shw(){hd=false;fg.classList.remove('hidden');if(sb)sb.classList.remove('hidden');}function rst(){clearTimeout(tm_id);if(!hd){hd=true;fg.classList.add('hidden');if(sb)sb.classList.add('hidden');}tm_id=setTimeout(shw,5000);}document.addEventListener('keydown',rst);if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){const m=document.createElement('meta');m.name='viewport';m.content='width=device-width,height=device-height,initial-scale=1,user-scalable=no,shrink-to-fit=yes';document.head.appendChild(m);mw.style.display="block";setTimeout(()=>mw.style.display="none",5000);}async function fwp(u){const r=await fetch(u),rd=r.body.getReader(),ch=[];while(true){const{done,value}=await rd.read();if(done)break;lb+=value.length;ch.push(value);lt.textContent=`${(lb/1048576).toFixed(2)} MB / ${tm} MB`;}return URL.createObjectURL(new Blob(ch));}async function mf(p){const b=await Promise.all(p.map(fwp)),bl=await Promise.all(b.map(u=>fetch(u).then(r=>r.blob())));return URL.createObjectURL(new Blob(bl));}function gp(f,s,e){return Array.from({length:e-s+1},(_,i)=>`${f}.part${s+i}`);}(async()=>{const[du,wu]=await Promise.all([mf(gp("Build/hktruffled.data",1,45)),mf(gp("Build/hktruffled.wasm",1,2))]),sc=document.createElement("script");sc.src="Build/hktruffled.loader.js";sc.onload=()=>{createUnityInstance(cv,{dataUrl:du,frameworkUrl:"Build/hktruffled.framework.js",codeUrl:wu,streamingAssetsUrl:"StreamingAssets",companyName:"Team Cherry",productName:"Hollow Knight",productVersion:"1.0"}).then(()=>{lt.remove();asb();fg.style.display='block';uf();}).catch(alert);};document.body.appendChild(sc);})();function asb(){sb=document.createElement('button');sb.className='savebtn';sb.textContent='download';sb.onclick=sdl;document.body.appendChild(sb);}function odb(n){return new Promise((ok,bd)=>{const r=indexedDB.open(n);r.onsuccess=()=>ok(r.result);r.onerror=()=>bd(r.error);});}function ga(d,s){return new Promise((ok,bd)=>{const t=d.transaction([s],'readonly'),st=t.objectStore(s),r=st.getAll();r.onsuccess=()=>ok(r.result);r.onerror=()=>bd(r.error);});}async function sdl(){try{const dbs=await indexedDB.databases();let sv={},fd=false;for(const inf of dbs){const db=await odb(inf.name);for(const st of db.objectStoreNames){try{const dt=await ga(db,st);if(dt&&dt.length>0){const fx=dt.map(it=>{if(it.contents&&it.contents instanceof Uint8Array){return{...it,contents:Array.from(it.contents)};}return it;});sv[`${inf.name}/${st}`]=fx;fd=true;}}catch(e){}}db.close();}if(!fd){alert('No save found');return;}const js=JSON.stringify(sv),bl=new Blob([js],{type:'application/octet-stream'}),u=URL.createObjectURL(bl),a=document.createElement('a');a.href=u;a.download='hk_save.dat';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u);}catch(e){alert('Download failed: '+e.message);}}
+</script>
 </body>
-
 </html>
