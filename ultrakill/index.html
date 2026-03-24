@@ -235,8 +235,7 @@
             const dataParts = getParts("Build/ultrakill.data.unityweb", 1, 4);
             const wasmParts = getParts("Build/ultrakill.wasm.unityweb", 1, 2);
 
-            // 🔥 approximate total size (adjust if you want perfect accuracy)
-            totalBytes = 400 * 1024 * 1024;
+            totalBytes = 98000000;
 
             const [dataUrl, wasmUrl] = await Promise.all([
                 mergeFiles(dataParts),
@@ -272,4 +271,4 @@
     </script>
 
 </body>
-</html>
+</html
