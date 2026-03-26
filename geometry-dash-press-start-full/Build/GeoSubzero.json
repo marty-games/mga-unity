@@ -2,7 +2,7 @@
 "companyName": "Marty Games",
 "productName": "Geometry Dash SubZero",
 "productVersion": "1.1",
-"dataUrl": "https://raw.githack.com/marty-games/mga-unity/main/geometry-dash-press-start-full/Build/GeoSubzero.data.unityweb",
+"dataUrl": "GeoSubzero.data.unityweb",
 "wasmCodeUrl": "GeoSubzero.wasm.code.unityweb",
 "wasmFrameworkUrl": "GeoSubzero.wasm.framework.unityweb",
 "graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
