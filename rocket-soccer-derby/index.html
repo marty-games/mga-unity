@@ -1,44 +1,55 @@
 <!DOCTYPE html>
-<html>
-    
-<head>
-    <base href="https://cdn.jsdelivr.net/gh/marty-games/mga-unity@main/rocket-soccer-derby/">
+
+
+<!-- Ultimate Game Stash file--> 
+<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
+
+
+
+<html lang="en-us">
+  <head>
+    <base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/rocket%20soccer%20derby/">
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Rocket Soccer Derby</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <script>
-        window.config = {
-            loader: 'unity',
-            debug: false,
-            maxRatio: 16 / 9,
-            minRatio: 9 / 16,
+  <title>Rocket Soccer </title>
+  <meta name="robots" content="noindex,nofollow" />
+  	            <script> 
+      window.fileMergerConfig = {
+        files: [
+          { name: 'RSD 1.1.0rc4.data.unityweb', parts: 2 },
+          { name: 'RSD 1.1.0rc4.wasm.code.unityweb', parts: 2 },
+          { name: 'RSD 1.1.0rc4.wasm.framework.unityweb', parts: 1 },
+        ],
+        basePath: 'Build/',
+        debug: true
+      };  
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/merge.js"></script>
+  <script>
+    window.config = {
+      loader: 'unity',
+      debug: false,
+      maxRatio: 16 / 9,
+      minRatio: 9 / 16,
 
-            title: 'Rocket League',
+      title: 'Rocket Soccer',
 
-            thumbnail: 'RocketSoccer.jpg',
-            numScreenshots: 4,
+      thumbnail: 'e521bbbf13a6480b60d75421e7edc8d8d0e1edadaccd7d43438864b62a74088a.png',
+      numScreenshots: 4,
 
-            unityWebglBuildUrl: 'build.json',
-            unityWebglLoaderUrl: 'UnityLoader.js',
+      unityWebglBuildUrl: 'Build/RSD 1.1.0rc4.json',
+      unityWebglLoaderUrl: 'UnityLoader.js',
 
-            // Optional Settings
-            fileSize: 27,
-            loadingComments: ['Loading...'],
-            cachedDecompressedFileSizes: {
-                'RSD 1.1.0rc4.wasm.framework.unityweb': 538308,
-                'RSD 1.1.0rc4.wasm.code.unityweb': 26620102,
-                'RSD 1.1.0rc4.data.unityweb': 29723236,
-            },
-            //
-        };
-    </script>
+      // **** Optional Settings ****
+      fileSize: 27,
+      loadingComments: ['Loading...'],
+      cachedDecompressedFileSizes: {
+        'RSD 1.1.0rc4.wasm.framework.unityweb': 538308,
+        'RSD 1.1.0rc4.wasm.code.unityweb': 26620102,
+        'RSD 1.1.0rc4.data.unityweb': 29723236,
+      },
+      //
+    };
+  </script>
 </head>
-
-<body>
-    <script src="master-loader.js"></script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"79a9f3414df430b4","token":"c843b8c381814d58b40d4597a1bf7962","version":"2023.2.0","si":100}' crossorigin="anonymous"></script>
-</body>
-</html>
-</html>
